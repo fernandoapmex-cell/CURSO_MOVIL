@@ -87,6 +87,8 @@ class Coustom_Button extends StatelessWidget {
   Widget build(BuildContext context) {
     return FloatingActionButton(
       shape: StadiumBorder(),
+      elevation: 10,
+      backgroundColor: Colors.blue,
       onPressed: this.onPressed,
       child: Icon(icon),
     );
