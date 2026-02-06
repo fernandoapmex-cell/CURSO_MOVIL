@@ -7,7 +7,7 @@ class MessageFieldBox extends StatelessWidget {
   Widget build(BuildContext context) {
     final textcontroller = TextEditingController();
     final FocusNode focusNode = FocusNode();
-    final colors = Theme.of(context).colorScheme;
+    //final colors = Theme.of(context).colorScheme;
     final OutlineInputBorder = UnderlineInputBorder(
       borderSide: BorderSide(color: Colors.transparent),
       borderRadius: BorderRadius.circular(40),
