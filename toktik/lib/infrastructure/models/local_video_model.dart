@@ -15,7 +15,7 @@ class LocalVideoModel{
     required this.views,
   });
 
-  factory LocalVideoModel.fromMap(Map<String, dynamic> map) {
+  factory LocalVideoModel.fromJson(Map<String, dynamic> map) {
     return LocalVideoModel(
       name: map['name'] ?? 'no name', // los ?? sirven para poner un valor por defecto si no hay uno
       videoUrl: map['videoUrl'] ?? 'no url',
