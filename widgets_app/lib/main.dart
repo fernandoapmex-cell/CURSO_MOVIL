@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_app/config/theme/app_theme.dart';
 import 'package:widgets_app/config/router/app_router.dart';
+
 void main() {
   runApp(const MainApp());
 }
@@ -15,7 +16,7 @@ class MainApp extends StatelessWidget {
       routerConfig: appRoter,
       debugShowCheckedModeBanner: false,
       theme: AppTheme(selectedColor: 2).getTheme(),
-/*       routes: {
+      /*       routes: {
         '/buttons': (context) => const ButtonsScreen(),
         '/cards': (context) => const CardsScreen(),
       }, */

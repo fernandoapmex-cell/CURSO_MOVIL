@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:widgets_app/config/menu/menu_items.dart';
+import 'package:widgets_app/presentation/widgets/drawers/side_menu.dart';
 
 class HomeScreen extends StatelessWidget {
-  static const name='home-screen';
+  static const name = 'home_screen';
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final scaffloldKey=GlobalKey<ScaffoldState>();
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Widgets en Flutter'),
-      ),
+      key:scaffloldKey,
+      appBar: AppBar(title: const Text('Widgets en Flutter')),
       body: _HomeView(),
+      drawer: SideMenu(scaffoldKey: scaffloldKey),
     );
   }
 }
@@ -23,34 +25,31 @@ class _HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-
-     itemCount: appMenuItems.length,
-     itemBuilder: (context, index){
-      final menuItem = appMenuItems[index];
-      return _CustomListTitle(menuItem: menuItem);
-        },
-      );
-     }
+      itemCount: appMenuItems.length,
+      itemBuilder: (context, index) {
+        final menuItem = appMenuItems[index];
+        return _CustomListTitle(menuItem: menuItem);
+      },
+    );
   }
+}
 
 class _CustomListTitle extends StatelessWidget {
-  const _CustomListTitle({
-    required this.menuItem,
-  });
+  const _CustomListTitle({required this.menuItem});
 
   final MenuItem menuItem;
 
   @override
   Widget build(BuildContext context) {
-    final colors=Theme.of(context).colorScheme;
+    final colors = Theme.of(context).colorScheme;
     return ListTile(
-      leading: Icon(menuItem.icon,color: colors.primary),
-      trailing:Icon(Icons.arrow_forward_ios_outlined,color: colors.primary),
+      leading: Icon(menuItem.icon, color: colors.primary),
+      trailing: Icon(Icons.arrow_forward_ios_outlined, color: colors.primary),
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subtitle),
       onTap: () {
         //TODO: Navegar a la pantalla correspondiente
-/*         Navigator.of(context).push(
+        /*         Navigator.of(context).push(
           MaterialPageRoute(
             builder: (context)=>const ButtonsScreen(),
           ),
