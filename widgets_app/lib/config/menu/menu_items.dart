@@ -20,5 +20,5 @@ const appMenuItems =<MenuItem>[
   MenuItem(title: 'UI Controls', subtitle: 'Controles de interfaz de usuario', link: '/ui_controls', icon: Icons.settings_input_component_outlined),
   MenuItem(title: 'Introduccion a la aplicacion', subtitle: 'pequeño tutorial introductorio', link: '/tutorial', icon: Icons.accessibility_new_outlined),
   MenuItem(title: 'Infinite Scroll & Pull', subtitle: 'Listas Infinitas y pull to refesh', link: '/infinite', icon: Icons.list_alt_outlined),
-
+  MenuItem(title: 'Cambiar Tema', subtitle: 'Cambiar tema de la app', link: '/theme_changer', icon: Icons.lens_blur_outlined),
 ];
