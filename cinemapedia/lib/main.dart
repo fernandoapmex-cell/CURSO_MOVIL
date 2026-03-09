@@ -1,8 +1,9 @@
 import 'package:cinemapedia/config/router/app_router.dart';
 import 'package:cinemapedia/config/theme/app_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+Future <void> main()async{
   runApp(const MainApp());
 }
 
